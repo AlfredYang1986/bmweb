@@ -1,0 +1,122 @@
+
+$font-stack:    PingFangSC-Regular, Helvetica, sans-serif;
+
+.content {
+  margin-left: 0px;
+}
+
+.head {
+  background: url("https://bm-web.oss-cn-beijing.aliyuncs.com/head.jpg");
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  color: #fff;
+  display: inline-block;
+
+  .content p {
+    font-family: $font-stack;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: calc(350px - 90px);
+    float: left;
+  }
+
+  .content img {
+    position: relative;
+    left: 90px;
+    width: 241px;
+    margin-top: 300px;
+  }
+
+  .pop_up {
+    position: absolute;
+    width: 365px;
+    height: 200px;
+    background: rgba(12,35,43,.8);
+    right: 8%;
+    margin-top: 60px;
+    // top: 12%;
+  }
+
+  .qr-code {
+    position: relative;
+    float: left;
+    left: 30px;
+    top: 35px;
+  }
+}
+
+.header {
+  position: relative;
+  top: 30px;
+  padding: 0 9%;
+
+  .logo {
+    margin: 2px 0 0 10px;
+    /*float: left;*/
+    color: white;
+    font-family: $font-stack;
+    font-size: 12px;
+
+    img {
+      width: 47px;
+      height: 20px;
+    }
+  }
+
+  .nav-adjust {
+    /*top: 10px;*/
+  }
+
+  .nav-href {
+    a {
+      color: white;
+      padding: 0 30px;
+      font-family: $font-stack;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn {
+      height: 38px;
+      padding: 0 30px;
+      margin-left: 20px;
+      margin-top: -5px;
+      line-height: 38px;
+      background: #FFFFFF;
+      border-radius: 5px;
+      box-shadow: 0 4px 9px 0 rgba(52,56,74,0.20);
+      font-family: $font-stack;
+      font-size: 14px;
+      color: #34384A;
+    }
+  }
+}
+
+.qr_head {
+  text-align: center;
+
+  .img img {
+    width: 97px;
+    height: 97px;
+    background: #fff;
+    box-shadow: 0 4px 9px 0 rgba(52, 56, 74, 1);
+    margin-top: 30px;
+  }
+}
+
+.qr_head_container {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+  .head .content img {
+      position: relative;
+      left: 90px;
+      width: 241px;
+      margin-top: 300px;
+      margin-right: 9%;
+  }
+}

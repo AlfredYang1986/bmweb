@@ -1,0 +1,55 @@
+
+$font-stack:    PingFangSC-Regular, Helvetica, sans-serif;
+
+@media (max-width: 992px) {
+    .cell-not-display {
+        display: none;
+    }
+    .cell-display-home img {
+        width: 100%;
+        display: inherit;
+    }
+    .other-not-display {
+        display: inherit;
+    }
+
+    .home {
+      .dd-time {
+        background: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+      }
+
+      p.tit {
+        margin: 0 0 0 30px;
+        font-family: $font-stack;
+        font-size: 14px;
+        color: #898c96;
+        letter-spacing: 1px;
+        line-height: 56px;
+        width: 40%;
+        margin-left: 15%;
+      }
+
+      .status {
+        font-family: $font-stack;
+        font-size: 14px;
+        color: #5F6270;
+        letter-spacing: 1px;
+        margin: 32px 0 0 0;
+      }
+
+    }
+
+    .ct-mid {
+        display: block;
+        margin-bottom: 0px;
+    }
+    .tips-content-text-align {
+        text-align: center;
+    }
+    .banner {
+        height: 297px;
+    }
+}
