@@ -1,21 +1,10 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var nodeSass = require('node-sass');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    'ember-bootstrap': {
-      'bootstrapVersion': 4,
-      'importBootstrapFont': false,
-      'importBootstrapCSS': false
-    },
-    sassOptions: {
-      includePaths: [
-        'bower_components/foundation/scss'
-      ],
-      nodeSass: nodeSass
-    }
+    // Add options here
   });
 
   // Use `app.import` to add additional libraries to the generated
