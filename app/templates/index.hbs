@@ -1,14 +1,6 @@
 {{#bp-layout direction='col' main='center' classNames='page-index'}}
-    {{#bp-layout direction='row' main='start' cross='center' classNames='nav-top mt-4'}}
-        <img class="logo" src="/images/img_logo_white.svg"/>
-        {{#bp-layout direction='row' main='start' classNames='nav'}}
-            <p class="title mr-4">在这里打造未来</p>
-            <p class="title mr-4">互动数据实验室</p>
-            <p class="title mr-4">数据处方</p>
-            <p class="title mr-4">数据资产</p>
-            <p class="title mr-4">安全与合规</p>
-        {{/bp-layout}}
-    {{/bp-layout}}
+    {{nav-top toHomepage=(action 'toIndex')}}
+    <a id="a1" class="anchor-point"></a>
     {{#bp-layout direction='col' main='center' classNames='header'}}
         {{#bp-layout direction='col' main='start' classNames='header-mid'}}
             <p class="title mb-4">在这里打造未来</p>
@@ -26,7 +18,8 @@
             {{/bp-layout}}
             <img class="pic" src="/images/img_databaseappapi.png"/>
         {{/bp-layout}}
-        {{#bp-layout direction='row' main='start' classNames='content-two'}}
+        <a id="a2" class="anchor-point"></a>
+        {{#bp-layout direction='row' main='start' cross="center" classNames='content-two'}}
             {{#bp-layout direction='col' main='start' classNames='left-card'}}
                 {{#bp-layout direction='row' main='start' classNames='detail mb-4'}}
                     <img class="icon" src="/images/icon_data-lab.svg">
@@ -47,13 +40,13 @@
             {{/bp-layout}}
             {{#bp-layout direction='col' main='start' classNames='card-wrapper'}}
                 <img class="pic mb-4" src="/images/icon_Visualization@3x.svg"/>
-                <p class="title mb-4">连接</p>
-                <p class="des">在一个平台上，任意调用您的所有信息</p>
+                <p class="title mb-4">呈现</p>
+                <p class="des">丰富的可视化图表，以实时交互方式探索与绘制最具影响力的故事</p>
             {{/bp-layout}}
             {{#bp-layout direction='col' main='start' classNames='card-wrapper'}}
                 <img class="pic mb-4" src="/images/icon_Collaboration@3x.svg"/>
-                <p class="title mb-4">连接</p>
-                <p class="des">在一个平台上，任意调用您的所有信息</p>
+                <p class="title mb-4">协作</p>
+                <p class="des">让每个人都参与，让每个人都享用，令您的团队如虎添翼</p>
             {{/bp-layout}}
         {{/bp-layout}}
     {{/bp-layout}}
@@ -61,7 +54,8 @@
         <img class="pic" src="/images/img_bg-divider-up.png"/>
     {{/bp-layout}}
     {{#bp-layout direction='col' main='start' cross='center' classNames='content'}}
-        {{#bp-layout direction='row' main='start' classNames='content-two'}}
+        <a id="a3" class="anchor-point"></a>
+        {{#bp-layout direction='row' main='start' cross="center" classNames='content-two'}}
             {{#bp-layout direction='col' main='start' classNames='left-card'}}
                 {{#bp-layout direction='row' main='start' classNames='detail mb-4'}}
                     <img class="icon" src="/images/icon_data-recipe.svg">
@@ -75,13 +69,13 @@
             {{/bp-layout}}
         {{/bp-layout}}
         {{#bp-layout direction='row' main='between' classNames='content-four'}}
-            {{#bp-layout direction='col' main='start' classNames='card-wrapper'}}
+            {{#bp-layout direction='col' main='start' classNames='card-wrapper mr-3'}}
                 <img class="pic" src="/images/img_click@3x.png">
-                <p class="des">简洁易用，无需任何代码，<br/>点击即可应用现成的处方，随时展开探索与洞察</p>
+                <p class="des">简洁易用，无需任何代码，点击即可应用现成的处方，随时展开探索与洞察</p>
             {{/bp-layout}}
-            {{#bp-layout direction='col' main='start' classNames='card-wrapper'}}
+            {{#bp-layout direction='col' main='start' classNames='card-wrapper mr-3'}}
                 <img class="pic" src="/images/img_code@3x.png">
-                <p class="des mb-3">专业强大，支持R、Python、SQL等混合编程环境，<br/>内置各种函数，满足您每个步骤的根本诉求</p>
+                <p class="des mb-3">专业强大，支持R、Python、SQL等混合编程环境，内置各种函数，满足您每个步骤的根本诉求</p>
                 <p class="des-block">监测</p>
             {{/bp-layout}}
         {{/bp-layout}}
@@ -90,19 +84,20 @@
         <img class="pic" src="/images/img_bg-divider-down.png"/>
     {{/bp-layout}}
     {{#bp-layout direction='col' main='start' cross='center' classNames='content'}}
-        {{#bp-layout direction='col' main='start' classNames='content-five'}}
-            <p class="title">批流一体数据融合，构建灵活健壮的企业级数据资产管理平台</p>
+        <a id="a4" class="anchor-point"></a>
+        {{#bp-layout direction='col' main='start' cross='center' classNames='content-five'}}
+            <p class="title-top">批流一体数据融合，构建灵活健壮的企业级数据资产管理平台</p>
             {{#bp-layout direction='row' main='between' classNames='content-wrapper'}}
                 {{#bp-layout direction='col' main='start' classNames='card-wrapper'}}
-                    {{#bp-layout direction='row' main='center' cross='center' classNames='pic-wrapper mb-5'}}
+                    {{#bp-layout direction='row' main='center' cross='center' classNames='pic-wrapper'}}
                         <img class="pic" src="/images/icon_Date-integration@3x.png">
                     {{/bp-layout}}
                     <p class="title mb-3">多域实时数据融合 </p>
                     <p class="des mb-3">只需拖拽，便可一键实现规模化ETL，从原始数据迅速迁移到任何您需要的地方。</p>
                     <p class="des-block">监测</p>
                 {{/bp-layout}}
-                {{#bp-layout direction='col' main='start' classNames='card-wrapper'}}
-                    {{#bp-layout direction='row' main='center' cross='center' classNames='pic-wrapper mb-5'}}
+                {{#bp-layout direction='col' main='start' classNames='card-wrapper mx-4'}}
+                    {{#bp-layout direction='row' main='center' cross='center' classNames='pic-wrapper'}}
                         <img class="pic" src="/images/icon_Data-governance@3x.png">
                     {{/bp-layout}}
                     <p class="title mb-3">数据治理 </p>
@@ -110,7 +105,7 @@
                     <p class="des-block">监测</p>
                 {{/bp-layout}}
                 {{#bp-layout direction='col' main='start' classNames='card-wrapper'}}
-                    {{#bp-layout direction='row' main='center' cross='center' classNames='pic-wrapper mb-5'}}
+                    {{#bp-layout direction='row' main='center' cross='center' classNames='pic-wrapper'}}
                         <img class="pic" src="/images/icon_data-co@3x.png">
                     {{/bp-layout}}
                     <p class="title mb-3">数据认知与协同</p>
@@ -124,6 +119,7 @@
         <img class="pic" src="/images/img_bg-divider-up.png"/>
     {{/bp-layout}}
     {{#bp-layout direction='col' main='start' cross='center' classNames='content'}}
+        <a id="a5" class="anchor-point"></a>
         {{#bp-layout direction='col' main='center' cross='center' classNames='content-six'}}
             <p class="title">变革与突破，带您开启全新数据之旅</p>
             {{#bp-layout direction='col' main='center' cross='center' classNames='content-wraper-outer'}}
@@ -131,7 +127,7 @@
                     {{#bp-layout direction='col' main='start' classNames='card-wraper'}}
                         <img class="pic mb-4" src="/images/icon_security@2x.svg">
                         <p class="title mb-4">安全</p>
-                        <p class="des">Sandbox机制与非对称加密，保障数据安全<br/>角色与数字证书双重验证，监控应用过程</p>
+                        <p class="des">Sandbox机制与非对称加密，保障数据安全.角色与数字证书双重验证，监控应用过程</p>
                     {{/bp-layout}}
                     <div class="split-line-col"></div>
                     {{#bp-layout direction='col' main='start' classNames='card-wraper'}}

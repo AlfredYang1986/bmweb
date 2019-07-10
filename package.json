@@ -46,11 +46,13 @@
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.7.1",
-		"sass": "^1.14.0"
+    "sass": "^1.14.0"
   },
   "dependencies": {
-		"bp-components": "*"
-	},
+    "bp-components": "*",
+    "ember-cli-scroller": "^0.0.1",
+    "ember-cli-shims": "^1.2.0"
+  },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
   }

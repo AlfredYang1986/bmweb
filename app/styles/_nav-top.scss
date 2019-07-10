@@ -1,0 +1,29 @@
+.nav-top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 64px;
+    padding: 20px 0;
+
+    .logo {
+        width: 100px;
+        height: 26px;
+        margin-left: 80px;
+    }
+    .nav {
+
+        .title {
+            cursor: pointer;
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+        }
+        .scrolled-title {
+            color: #132346;
+
+            &.active {
+                color: #0091F4;
+            }
+        }
+    }
+}
