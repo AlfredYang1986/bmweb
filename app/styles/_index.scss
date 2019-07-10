@@ -10,6 +10,27 @@
             height: 75px;
         }
     }
+    .nav-top {
+        position: fixed;
+        top: 0;
+        height: 30px;
+        margin: 0 80px;
+
+        .logo {
+            width: 100px;
+            height: 26px;
+            margin-right: 265px;
+        }
+        .nav {
+
+            .title {
+                cursor: pointer;
+                font-size: 14px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+            }
+        }
+    }
     .header {
         background-image: url('/images/img_head-bg.png');
         background-repeat: no-repeat;
@@ -193,7 +214,7 @@
                         border: 0.5px solid #06173C;
                     }
                     .card-wraper {
-                        width: 408px;
+                        width: 300px;
                         height: 212px;
 
                         .pic {
