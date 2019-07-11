@@ -3,6 +3,8 @@ import Scroller from 'ember-cli-scroller';
 import $ from 'jquery';
 
 export default Component.extend(Scroller, {
+    navCollapsed: true,
+
     didInsertElement: function() {
         this.bindScrolling();
     },
@@ -18,12 +20,16 @@ export default Component.extend(Scroller, {
         if (cur < aTop) {
             let ft = cur * 1.0 / aTop;
             $('#nav').css("background-color", 'rgba(255, 255, 255, ' + ft + ')');
+            $('#nav-min').css("background-color", 'rgba(255, 255, 255, ' + ft + ')');
             $('.logo').attr("src","/images/img_logo_white.svg");
             $('.title').removeClass('scrolled-title');
+            $('.menu-icon').attr("src","/images/icon_meun.svg");
         } else {
             $('#nav').css("background-color", 'rgba(255, 255, 255, 1.0)');
+            $('#nav-min').css("background-color", 'rgba(255, 255, 255, 1.0)');
             $('.logo').attr("src","/images/img_logo_theme.svg");
             $('.title').addClass('scrolled-title');
+            $('.menu-icon').attr("src","/images/icon_meun-blue.svg");
         }
 
         let wst = $(window).scrollTop() //滚动条距离顶端值
@@ -35,6 +41,9 @@ export default Component.extend(Scroller, {
         }
     },
     actions: {
+        toggleNav() {
+            this.toggleProperty("navCollapsed");
+        },
         linkToIndex() {
             this.toHomepage();
         },

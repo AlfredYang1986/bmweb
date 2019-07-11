@@ -26,12 +26,55 @@
             }
         }
     }
+    .menu-icon {
+        display: none;
+    }
 }
 @media screen and (max-width: 768px) and (min-width: 375px) {
     .nav-top {
-
+        
         .logo {
-            margin-left: 40px;
+            margin-left: 24px;
+        }
+        .nav {
+            display: none;
+        }
+        .empty {
+            display: none;
+        }
+        .menu-icon {
+            height: 24px;
+            width: 24px;
+            margin-right: 24px;
+            display: unset;
+        }
+        // .dropdown-content-top .nav {
+        //     display: flex;
+        // }
+    }
+    .top-nav-collapse {
+        position: fixed;
+        top: 64px;
+        width: 100%;
+
+        .drop-area {
+            margin: 24px;
+
+            .nav {
+                .title {
+                    cursor: pointer;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                }
+                .scrolled-title {
+                    color: #132346;
+        
+                    &.active {
+                        color: #0091F4;
+                    }
+                }
+            }
         }
     }
 }
@@ -40,6 +83,54 @@
         
         .logo {
             margin-left: 24px;
+        }
+        .nav {
+            display: none;
+        }
+        .empty {
+            display: none;
+        }
+        .menu-icon {
+            height: 24px;
+            width: 24px;
+            margin-right: 24px;
+            display: unset;
+
+            &.scrolled-menu-icon {
+                color: #0091F4;
+                
+                path {
+                    fill: #0091F4;
+                }
+            }
+        }
+        // .dropdown-content-top .nav {
+        //     display: flex;
+        // }
+    }
+    .top-nav-collapse {
+        position: fixed;
+        top: 64px;
+        width: 100%;
+
+        .drop-area {
+            margin: 24px;
+
+            .nav {
+                .title {
+                    cursor: pointer;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                }
+                .scrolled-title {
+                    color: #132346;
+        
+                    &.active {
+                        color: #0091F4;
+                    }
+                }
+            }
         }
     }
 }

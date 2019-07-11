@@ -136,12 +136,11 @@
                     
                     .des-block {
                         @extend %bm-p1;
-                        padding-left: 8px;
                         padding-right: 8px;
-                        border-left: 0.5px solid #DADCE2;
+                        margin-right: 8px;
+                        border-right: 0.5px solid #DADCE2;
 
-                        &:nth-child(1) {
-                            padding-left: 0;
+                        &:nth-last-child(1) {
                             border: none;
                         }
                     }
@@ -188,12 +187,11 @@
                         
                         .des-block {
                             @extend %bm-pp;
-                            padding-left: 4px;
                             padding-right: 4px;
-                            border-left: 0.5px solid #DADCE2;
+                            margin-right: 4px;
+                            border-right: 0.5px solid #DADCE2;
 
-                            &:nth-child(1) {
-                                padding-left: 0;
+                            &:nth-last-child(1) {
                                 border: none;
                             }
                         }
