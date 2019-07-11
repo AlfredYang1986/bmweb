@@ -48,7 +48,7 @@
 
                 span {
                     @extend %bm-h3;
-                    width: 96px;
+                    width: 20%;
                     text-align: center;
                 }
             }
@@ -59,6 +59,7 @@
         }
         .content-two {
             width: 100%;
+            max-width: 1200px;
             // height: 222px;
             margin-bottom: 64px;
 
@@ -93,6 +94,7 @@
         }
         .content-three {
             width: 100%;
+            max-width: 1200px;
             margin-bottom: 40px;
             
             .card-wrapper {
@@ -110,8 +112,12 @@
                 }
             }
         }
+        .content-three.min {
+            display: none;
+        }
         .content-four {
             width: 100%;
+            max-width: 1200px;
             margin-bottom: 112px;
 
             .card-wrapper {
@@ -122,18 +128,37 @@
                     width: 48px;
                     margin-bottom: 40px;
                 }
-                .des, .des-block{
+                .des {
                     @extend %bm-p1;
+                }
+                .des-block-wrapper {
+                    width: 100%;
+                    
+                    .des-block {
+                        @extend %bm-p1;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        border-left: 0.5px solid #DADCE2;
+
+                        &:nth-child(1) {
+                            padding-left: 0;
+                            border: none;
+                        }
+                    }
                 }
             }            
         }
+        .content-four.min {
+            display: none;
+        }
         .content-five {
-            width: 100%;
+            max-width: 1200px;
 
             .title-top {
                 @extend %bm-h1;
                 margin-top: 40px;
                 margin-bottom: 64px;
+                text-align: center;
             }
             .content-wrapper {
                 width: 100%;
@@ -158,8 +183,20 @@
                     .des {
                         @extend %bm-p1;
                     }
-                    .des-block {
-                        @extend %bm-pp;
+                    .des-block-wrapper {
+                        width: 100%;
+                        
+                        .des-block {
+                            @extend %bm-pp;
+                            padding-left: 4px;
+                            padding-right: 4px;
+                            border-left: 0.5px solid #DADCE2;
+
+                            &:nth-child(1) {
+                                padding-left: 0;
+                                border: none;
+                            }
+                        }
                     }
                     &:nth-child(1) {
                         .pic-wrapper {
@@ -178,6 +215,9 @@
                     }
                 }
             }
+            .content-wrapper.min {
+                display: none;
+            }
         }
         .content-six {
             width: 100%;
@@ -185,8 +225,9 @@
             .title {
                 @extend %bm-h1;
                 margin-bottom: 64px;
+                text-align: center;
             }
-            .content-wraper-outer {
+            .content-wrapper-outer {
                 // width: 100%;
 
                 .split-line-row {
@@ -202,7 +243,7 @@
                         opacity: 0.2;
                         border: 0.5px solid #06173C;
                     }
-                    .card-wraper {
+                    .card-wrapper {
                         width: 300px;
                         height: 212px;
 
@@ -212,6 +253,7 @@
                         }
                         .title {
                             @extend %bm-h2-n95;
+                            text-align: unset;
                         }
                         .des {
                             @extend %bm-p2;
@@ -219,11 +261,14 @@
                     }
                     &:nth-last-child(1) {
 
-                        .card-wraper {
+                        .card-wrapper {
                             padding-top: 40px;
                         }
                     }
                 }
+            }
+            .content-wrapper-outer.min {
+                display: none;
             }
         }
     }
@@ -241,12 +286,200 @@
 @media screen and (max-width: 768px) and (min-width: 375px) {
     .page-index {
 
+        .header {
+            padding: 0 40px;
+    
+            .title {
+                text-align: center;
+            }
+            .subtitle {
+                text-align: center;
+            }
+        }
         .content {
             padding: 0 40px;
+
+            .content-one { 
+                width: 100%;
+            }
+            .content-two {
+
+                .left-card {
+                    align-items: center;
+                    width: 100%;
+
+                    .title {
+                        text-align: center;
+                    }
+                    .des {
+                        text-align: center;
+                    }
+                }
+                .right-card {
+                    display: none;
+                }
+            }
+            .content-three {
+                display: none;
+            }
+            .content-three.min {
+                display: flex;
+            }
+            .content-four {
+                display: none;
+            }
+            .content-four.min {
+                display: flex;
+
+                .card-wrapper {
+                    width: 75%;
+                }
+            }
+            .content-five {
+                .content-wrapper {
+                    display: none;
+                }
+                .content-wrapper.min {
+                    display: flex;
+
+                    .card-wrapper {
+                        width: 75%;
+
+                        .title {
+                            text-align: center;
+                        }
+                        .des {
+                            text-align: center;
+                        }
+                        .des-block {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .content-six {
+                .content-wrapper-outer {
+                    display: none;
+                }
+                .content-wrapper-outer.min {
+                    display: flex;
+
+                    .card-wrapper {
+                        width: 75%;
+
+                        .title {
+                            text-align: center;
+                        }
+                        .des {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            margin: 40px;
+            margin-bottom: 24px;
         }
     }
 }
 
 @media screen and (max-width: 375px) {
+    .page-index {
+        
+        .header {
+            padding: 0 24px;
+    
+            .title {
+                text-align: center;
+            }
+            .subtitle {
+                text-align: center;
+            }
+        }
+        .content {
+            padding: 0 24px;
 
+            .content-one { 
+                width: 100%;
+            }
+            .content-two {
+
+                .left-card {
+                    align-items: center;
+                    width: 100%;
+
+                    .title {
+                        text-align: center;
+                    }
+                    .des {
+                        text-align: center;
+                    }
+                }
+                .right-card {
+                    display: none;
+                }
+            }
+            .content-three {
+                display: none;
+            }
+            .content-three.min {
+                display: flex;
+            }
+            .content-four {
+                display: none;
+            }
+            .content-four.min {
+                display: flex;
+
+                .card-wrapper {
+                    width: 100%;
+                }
+            }
+            .content-five {
+                .content-wrapper {
+                    display: none;
+                }
+                .content-wrapper.min {
+                    display: flex;
+
+                    .card-wrapper {
+                        width: 100%;
+
+                        .title {
+                            text-align: center;
+                        }
+                        .des {
+                            text-align: center;
+                        }
+                        .des-block {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .content-six {
+                .content-wrapper-outer {
+                    display: none;
+                }
+                .content-wrapper-outer.min {
+                    display: flex;
+
+                    .card-wrapper {
+                        width: 100%;
+
+                        .title {
+                            text-align: center;
+                        }
+                        .des {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            margin: 24px;
+        }
+    }
 }

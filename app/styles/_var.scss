@@ -24,6 +24,10 @@ $n300: #0091F4;
     color: $n100;
     letter-spacing: 1px;
     font-weight: 500;
+
+    @media screen and (max-width: 375px) {
+        font-size: 26px;
+    }
 }
 
 %bm-h2-n00 {
@@ -52,6 +56,10 @@ $n300: #0091F4;
     color: $n55;
     letter-spacing: 8px;
     font-weight: 500;
+
+    @media screen and (max-width: 375px) {
+        font-size: 16px;
+    }
 }
 
 %bm-h3 {
@@ -59,6 +67,10 @@ $n300: #0091F4;
     color: $n85;
     letter-spacing: 1px;
     font-weight: 300;
+
+    @media screen and (max-width: 375px) {
+        font-size: 14px;
+    }
 }
 
 %bm-p1 {
