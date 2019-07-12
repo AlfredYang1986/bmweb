@@ -322,6 +322,10 @@
             }
             .content-three.min {
                 display: flex;
+
+                .card-wrapper {
+                    width: 75%;
+                }
             }
             .content-four {
                 display: none;
@@ -423,6 +427,10 @@
             }
             .content-three.min {
                 display: flex;
+
+                .card-wrapper {
+                    width: 100%;
+                }
             }
             .content-four {
                 display: none;

@@ -7,29 +7,37 @@ export default Component.extend(Scroller, {
 
     didInsertElement: function() {
         this.bindScrolling();
+        $('#nav-min-outer').bind("touchmove",function(e){
+            e.stopPropagation();
+            e.preventDefault();
+        });
+        $('#nav-min').bind("touchmove",function(e){
+            e.stopPropagation();
+            e.preventDefault();
+        });
     },
     
     willRemoveElement: function() {
         this.unbindScrolling();
     },
     
-      scrolled: function () {
+    scrolled: function () {
         let cur = window.scrollY;
         let aTop = 80;
     
         if (cur < aTop) {
             let ft = cur * 1.0 / aTop;
             $('#nav').css("background-color", 'rgba(255, 255, 255, ' + ft + ')');
-            $('#nav-min').css("background-color", 'rgba(255, 255, 255, ' + ft + ')');
+            // $('#nav-min .nav').css("background-color", 'rgba(255, 255, 255, ' + ft + ')');
             $('.logo').attr("src","/images/img_logo_white.svg");
-            $('.title').removeClass('scrolled-title');
-            $('.menu-icon').attr("src","/images/icon_meun.svg");
+            $('#nav .title').removeClass('scrolled-title');
+            // $('.menu-icon').attr("src","/images/icon_meun.svg");
         } else {
             $('#nav').css("background-color", 'rgba(255, 255, 255, 1.0)');
-            $('#nav-min').css("background-color", 'rgba(255, 255, 255, 1.0)');
+            // $('#nav-min .nav').css("background-color", 'rgba(255, 255, 255, 1.0)');
             $('.logo').attr("src","/images/img_logo_theme.svg");
-            $('.title').addClass('scrolled-title');
-            $('.menu-icon').attr("src","/images/icon_meun-blue.svg");
+            $('#nav .title').addClass('scrolled-title');
+            // $('.menu-icon').attr("src","/images/icon_meun-blue.svg");
         }
 
         let wst = $(window).scrollTop() //滚动条距离顶端值
@@ -37,18 +45,27 @@ export default Component.extend(Scroller, {
             if ($("#a" + i).offset().top - 64 <= wst) { //判断滚动条位置 64是锚点偏移数
                 $('#nav a').removeClass("active"); //清除类
                 $("#a" + i + i).addClass("active"); //给当前导航加类
+                $('#nav-min a').removeClass("active"); //清除类
+                $("#a" + i + i + i).addClass("active"); //给当前导航加类
             }
         }
     },
     actions: {
         toggleNav() {
             this.toggleProperty("navCollapsed");
+            if (this.navCollapsed) {
+                $('.menu-icon').attr("src","/images/icon_meun-black.svg");
+            } else {
+                $('.menu-icon').attr("src","/images/icon_meun-blue.svg");
+            }
         },
         linkToIndex() {
             this.toHomepage();
         },
         navClick(param) {
             $('.title').removeClass('active');
+            this.set('navCollapsed',true);
+            $('.menu-icon').attr("src","/images/icon_meun-black.svg");
             if (param === 1) {
                 $('#a11').addClass('active');
             } else if (param === 2) {

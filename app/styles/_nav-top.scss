@@ -5,7 +5,7 @@
     height: 64px;
     padding: 20px 0;
 
-    .logo {
+    .logo, .logo-min{
         width: 100px;
         height: 26px;
         margin-left: 80px;
@@ -17,6 +17,10 @@
             font-size: 14px;
             color: #FFFFFF;
             letter-spacing: 0;
+
+            &.active {
+                color: #0091F4;
+            }
         }
         .scrolled-title {
             color: #132346;
@@ -30,107 +34,67 @@
         display: none;
     }
 }
-@media screen and (max-width: 768px) and (min-width: 375px) {
+.nav-top.min {
+    display: none;
+    background-color: #FFFFFF;
+}
+.top-nav-collapse {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
     .nav-top {
-        
-        .logo {
+        display: none;
+    }
+    .nav-top.min {
+        display: flex;
+
+        .logo, .logo-min{
             margin-left: 24px;
         }
-        .nav {
-            display: none;
-        }
-        .empty {
-            display: none;
-        }
         .menu-icon {
+            display: unset;
             height: 24px;
             width: 24px;
             margin-right: 24px;
-            display: unset;
         }
         // .dropdown-content-top .nav {
         //     display: flex;
         // }
     }
     .top-nav-collapse {
+        display: unset;
         position: fixed;
         top: 64px;
         width: 100%;
 
         .drop-area {
-            margin: 24px;
 
             .nav {
+                background-color: #FFFFFF;
+                
                 .title {
+                    height: 40px;
+                    line-height: 40px;
                     cursor: pointer;
                     font-size: 14px;
-                    color: #FFFFFF;
-                    letter-spacing: 0;
-                }
-                .scrolled-title {
                     color: #132346;
-        
+                    letter-spacing: 0;
+
                     &.active {
                         color: #0091F4;
                     }
                 }
+            }
+            .cover-layer {
+                opacity: 0.6;
+                background-color: #06173C;
+                height: calc(100vh - 344px);
             }
         }
     }
 }
+
 @media screen and (max-width: 375px) {
-    .nav-top {
-        
-        .logo {
-            margin-left: 24px;
-        }
-        .nav {
-            display: none;
-        }
-        .empty {
-            display: none;
-        }
-        .menu-icon {
-            height: 24px;
-            width: 24px;
-            margin-right: 24px;
-            display: unset;
 
-            &.scrolled-menu-icon {
-                color: #0091F4;
-                
-                path {
-                    fill: #0091F4;
-                }
-            }
-        }
-        // .dropdown-content-top .nav {
-        //     display: flex;
-        // }
-    }
-    .top-nav-collapse {
-        position: fixed;
-        top: 64px;
-        width: 100%;
-
-        .drop-area {
-            margin: 24px;
-
-            .nav {
-                .title {
-                    cursor: pointer;
-                    font-size: 14px;
-                    color: #FFFFFF;
-                    letter-spacing: 0;
-                }
-                .scrolled-title {
-                    color: #132346;
-        
-                    &.active {
-                        color: #0091F4;
-                    }
-                }
-            }
-        }
-    }
 }
