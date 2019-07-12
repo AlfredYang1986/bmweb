@@ -39,14 +39,22 @@ export default Component.extend(Scroller, {
             $('#nav .title').addClass('scrolled-title');
             // $('.menu-icon').attr("src","/images/icon_meun-blue.svg");
         }
-
-        let wst = $(window).scrollTop() //滚动条距离顶端值
+        
+        let wst = $(window).scrollTop(); //滚动条距离顶端值
+            // scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop(); //滚动条距离底端值
         for (let i = 1; i < 6; i++) { //加循环
             if ($("#a" + i).offset().top - 64 <= wst) { //判断滚动条位置 64是锚点偏移数
                 $('#nav a').removeClass("active"); //清除类
                 $("#a" + i + i).addClass("active"); //给当前导航加类
                 $('#nav-min a').removeClass("active"); //清除类
                 $("#a" + i + i + i).addClass("active"); //给当前导航加类
+
+                // if (scrollBottom <= 0) { //判断滚动条位置 是否到底
+                //     $('#nav a').removeClass("active"); //清除类
+                //     $("#a" + (i + 1) + (i + 1)).addClass("active"); //给当前导航加类
+                //     $('#nav-min a').removeClass("active"); //清除类
+                //     $("#a" + (i + 1) + (i + 1) + (i + 1)).addClass("active"); //给当前导航加类
+                // }
             }
         }
     },
